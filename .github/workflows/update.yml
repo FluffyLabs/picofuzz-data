@@ -31,7 +31,7 @@ jobs:
           fi
 
       - name: Regenerate picofuzz data
-        run: ./picofuzz-data/populate.sh
+        run: ./populate.sh
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5

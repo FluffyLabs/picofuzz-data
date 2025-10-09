@@ -5,12 +5,12 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 set -ex
 
 CONVERT="npx @typeberry/convert --"
-SOURCE=../jam-test-vectors/traces
-DEST=../picofuzz-data
+SOURCE=./jam-test-vectors/traces
+DEST=./picofuzz-data
 VERSION_FILE=$DEST/version
 
 # Get the current jam-test-vectors ref
-JAM_VECTORS_REF=$(cd ../jam-test-vectors && git rev-parse HEAD)
+JAM_VECTORS_REF=$(cd ./jam-test-vectors && git rev-parse HEAD)
 
 # Check if version file exists and matches
 if [ -f "$VERSION_FILE" ]; then
